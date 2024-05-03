@@ -1,4 +1,4 @@
-var db = db.getSiblingDB('messages');
+var db = db.getSiblingDB('admin');
 
 db.createCollection('greetings');
 

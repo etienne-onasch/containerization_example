@@ -27,6 +27,8 @@ show collections
 # show documents in a collection
 db.<collection_name>.find()
 
+db.auth("admin", "admin")
+
 
 # ping a container inside the shell
 ping <container_name>|<container_id>
