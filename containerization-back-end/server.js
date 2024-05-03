@@ -25,26 +25,28 @@ MongoClient.connect(url, (err, client) => {
   console.log('Connected to MongoDB');
   db = client.db('messages'); 
 
-  db.createCollection("greetings", (err, collection) => {
-    if (err) {
-      console.error('Error creating collection:', err);
-      client.close();
-      return;
-    }
-    console.log('Collection greetings created');
-    collection.insertOne({ message: 'hello from server!' }, (err, result) => {
-      if (err) {
-        console.error('Error inserting document:', err);
-        client.close();
-        return;
-      }
-      console.log('initial message inserted');
-      client.close();
-    });
-  });
+  // db.createCollection("greetings", (err, collection) => {
+  //   if (err) {
+  //     console.error('Error creating collection:', err);
+  //     client.close();
+  //     return;
+  //   }
+  //   console.log('Collection greetings created');
+  //   collection.insertOne({ message: 'hello from server!' }, (err, result) => {
+  //     if (err) {
+  //       console.error('Error inserting document:', err);
+  //       client.close();
+  //       return;
+  //     }
+  //     console.log('initial message inserted');
+  //     client.close();
+  //   });
+  // });
 
 });
 
+
+console.log("after connecting to mongo");
 
 
 

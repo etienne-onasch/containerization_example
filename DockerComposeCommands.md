@@ -6,6 +6,9 @@ docker-compose build --no-cache
 # running the docker images in containers
 docker-compose up -d
 
+# build and run the docker images in containers
+docker-compose up -d --build --no-cache
+
 # stopping the containers
 docker-compose stop
 
@@ -25,3 +28,6 @@ docker-compose logs -f
 
 # access to mongodb shell ?
 docker-compose exec mongo mongo
+
+# clean up 
+docker system prune --all --force

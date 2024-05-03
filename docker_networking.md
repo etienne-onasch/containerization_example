@@ -38,7 +38,3 @@ docker exec -it --user root <container_name>|<container_id> sh
 
 # see the ip address of the container
 ifconfig
-
-
-# clean up 
-docker system prune --all --force
