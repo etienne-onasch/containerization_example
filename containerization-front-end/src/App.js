@@ -6,7 +6,7 @@ function App() {
   const fetchMessage = async () => {
     setMessage('...');
     try {
-      const url = `http://USS-Enterprise.fritz.box:3751/getMessage`;
+      const url = `http://localhost:3751/getMessage`;
       const response = await fetch(url);
       const data = await response.json();
       setMessage(data.message);
